@@ -1,7 +1,5 @@
-/**   
- * Problem: A - Four Digits
- * Link: https://atcoder.jp/contests/abc222/tasks/abc222_a
- */
+// Problem Link: https://atcoder.jp/contests/abc222/tasks/abc222_a
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()

@@ -1,10 +1,7 @@
-/**   
- * Problem: A - Counting
- * Link: https://atcoder.jp/contests/abc209/tasks/abc209_a
- */
+//  Problem Link: https://atcoder.jp/contests/abc209/tasks/abc209_a
+
 #include<bits/stdc++.h>
 using namespace std;
- 
 int main()
 {
     int a, b;
