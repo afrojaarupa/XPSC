@@ -14,7 +14,7 @@ int main()
     sort(a.begin(), a.end());
 
     long long int l = 1, r = 2e9, mid, ans, sum;
-    while (l < r)
+    while (l <= r)
     {
         mid = (l + r) / 2;
         sum = 0;
