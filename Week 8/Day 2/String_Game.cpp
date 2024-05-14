@@ -1,3 +1,5 @@
+// Problem Link: https://www.codechef.com/problems/STRAME?tab=statement
+
 #include <bits/stdc++.h>
 using namespace std;
 
