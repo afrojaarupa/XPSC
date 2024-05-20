@@ -1,15 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long gcd(long long a, long long b) {
+long long gcd(long long a, long long b) 
+{
     return __gcd(a, b);
 }
 
-long long lcm(long long a, long long b) {
+long long lcm(long long a, long long b) 
+{
     return ((a / gcd(a, b)) * b);
 }
 
-int main() {
+int main() 
+{
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -18,10 +21,13 @@ int main() {
 
     ans += ((n / a) * p);
     ans += ((n / b) * q);
+
     overlap = (n / lcm(a, b));
+    
     ans -= (overlap * (p + q));
     ans += (overlap * max(p, q));
 
-    cout << ans << '\n';
+    cout << ans << endl;
+
     return 0;
 }
