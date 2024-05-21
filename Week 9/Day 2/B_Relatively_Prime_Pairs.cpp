@@ -1,13 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 int main() 
 {
-    long long l, r;
+    ll l, r;
     cin >> l >> r;
 
     cout << "YES" << endl;
-    for (long long i = l; i <= r; i += 2) 
+    for (ll i = l; i <= r; i += 2) 
     {
         cout << i << " " << (i + 1) << endl;
     }

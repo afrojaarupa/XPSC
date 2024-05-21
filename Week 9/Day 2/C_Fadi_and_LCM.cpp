@@ -2,28 +2,48 @@
 using namespace std;
 #define ll long long
 
-ll lcm(ll a, ll b)
+int main() 
 {
-    return a / __gcd(a, b) * b;
-}
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    ll n;
+    cin >> n;
+    vector<ll> factors;
 
-    ll x;
-
-    cin >> x;
-    ll ans = 1; 
-    for(ll i = 1 ; i * i <= x ; i++)
+    for (ll i = 2; i * i <= n; i++) 
     {
-        if(x % i == 0 && lcm(i, x / i) == x)
+        if (n % i == 0) 
         {
-            ans = i;
-            break;
-        } 
+            ll p = 1;
+            while (n % i == 0) 
+            {
+                n /= i;
+                p *= i;
+            }
+            factors.push_back(p);
+        }
     }
-    cout << ans << " " << x / ans << endl;
+    if (n > 1) factors.push_back(n);
+
+    int s = factors.size();
+    ll min_a = LLONG_MAX, min_b = LLONG_MAX;
+
+    for (int i = 0; i < (1 << s); i++) 
+    {
+        ll a = 1, b = 1;
+        for (int j = 0; j < s; j++) 
+        {
+            if (i & (1 << j))  a *= factors[j];
+            else  b *= factors[j];
+        }
+        if (max(a, b) < max(min_a, min_b)) 
+        {
+            min_a = a;
+            min_b = b;
+        }
+    }
+
+    cout << min_a << " " << min_b << endl;
     return 0;
 }
