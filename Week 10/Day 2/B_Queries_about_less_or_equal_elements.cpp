@@ -23,8 +23,8 @@ int main()
         cin >> x;
         cout << p.order_of_key(x+1) << " ";
     }
-    cout << endl;
 
+    cout << endl;
 
     return 0;
 }
