@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 int main() 
 {
@@ -11,7 +12,7 @@ int main()
         cin >> s1;
 
         int mn = s1.length() + 1;
-        long long p2 = 1;
+        ll p2 = 1;
 
         while (p2 <= (1LL << 60)) 
         {
